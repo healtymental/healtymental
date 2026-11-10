@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyMental Check.id - Intervensi Body Functionality Reflection</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans selection:bg-teal-500 selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="w-full bg-white border-b border-slate-100 py-4 px-6 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 bg-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-md shadow-teal-500/20">
+                    H
+                </div>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                    HealthyMental<span class="text-teal-600">.id</span>
+                </span>
+            </div>
+            <span id="badge-header" class="text-xs font-semibold px-3 py-1 bg-teal-50 text-teal-700 rounded-full border border-teal-100">
+                Digital Nursing Intervention
+            </span>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow flex items-center justify-center px-4 py-8">
+        
+        <!-- ================= HALAMAN 1: LANDING PAGE ================= -->
+        <div id="section-landing" class="max-w-md w-full bg-white rounded-3xl shadow-xl shadow-slate-200/60 p-8 border border-slate-100 transition-all duration-300">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold mb-6 border border-teal-200/60">
+                🌿 Media Intervensi Skripsi Keperawatan Jiwa
+            </div>
+
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug mb-3">
+                Refleksi Fungsi Tubuh & <span class="text-teal-600">Citra Tubuh Positif Remaja</span>
+            </h1>
+            
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Selamat datang! Platform ini dirancang untuk mengukur efektivitas <b>Body Functionality Reflection</b> terhadap peningkatan rasa percaya diri dan citra tubuh positif pada remaja SMA pengguna media sosial.
+            </p>
+
+            <div class="bg-teal-50/60 border border-teal-100 rounded-2xl p-4 mb-6 text-xs text-teal-900 leading-relaxed">
+                <span class="font-bold block mb-1">💡 Petunjuk Singkat:</span>
+                Tubuhmu bukan hanya untuk dilihat, tapi untuk melakukan banyak hal hebat! Mari ikuti sesi refleksi ini dengan jujur sesuai pengalamanmu sehari-hari.
+            </div>
+
+            <form id="form-identitas" class="space-y-4 mb-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                        Nama / Inisial Responden <span class="text-teal-600">*</span>
+                    </label>
+                    <input type="text" id="nama-user" required placeholder="Cth: Bintang / Inisial" 
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600 transition-all bg-slate-50/50">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                            Usia (Tahun)
+                        </label>
+                        <input type="number" id="usia-user" placeholder="Cth: 17" min="12" max="25"
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600 transition-all bg-slate-50/50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                            Asal Kelas / Sekolah
+                        </label>
+                        <select id="kelas-user" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600 transition-all bg-slate-50/50">
+                            <option value="Kelas 10 SMA">Kelas 10 SMA</option>
+                            <option value="Kelas 11 SMA">Kelas 11 SMA</option>
+                            <option value="Kelas 12 SMA" selected>Kelas 12 SMA</option>
+                            <option value="Sekolah X / Lainnya">Sekolah X / Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" 
+                    class="w-full mt-2 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-teal-600/25 transition-all duration-200 flex items-center justify-center space-x-2 group">
+                    <span>Mulai Sesi Refleksi</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="flex items-center justify-center space-x-1.5 text-slate-400 text-xs text-center">
+                <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <span>Data dijamin kerahasiaannya murni untuk kepentingan penelitian ilmiah.</span>
+            </div>
+        </div>
+
+        <!-- ================= HALAMAN 2: KUESIONER (STEP-BY-STEP) ================= -->
+        <div id="section-kuesioner" class="hidden max-w-md w-full bg-white rounded-3xl shadow-xl shadow-slate-200/60 p-8 border border-slate-100 transition-all duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <button onclick="kembaliKeLanding()" class="inline-flex items-center text-xs font-bold text-slate-400 hover:text-teal-600 transition-colors">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span>Batal / Beranda</span>
+                </button>
+                <span id="persen-progres" class="text-xs font-bold text-teal-600">5%</span>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between items-center text-xs font-bold text-slate-400 mb-2">
+                    <span id="label-progres">PERTANYAAN 1 DARI 20</span>
+                </div>
+                <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div id="bar-progres" class="h-full bg-teal-600 transition-all duration-300 rounded-full" style="width: 5%;"></div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <span id="kategori-badge" class="inline-block px-3 py-1 rounded-md bg-teal-50 text-teal-700 text-xs font-bold mb-3 uppercase tracking-wider">
+                    Aspek Refleksi
+                </span>
+                <h2 id="teks-pertanyaan" class="text-lg font-bold text-slate-900 leading-snug">
+                    Teks pertanyaan akan muncul di sini...
+                </h2>
+            </div>
+
+            <div class="space-y-3 mb-8">
+                <label class="flex items-center p-3.5 rounded-2xl border-2 border-slate-100 hover:border-teal-500 hover:bg-teal-50/30 cursor-pointer transition-all group">
+                    <input type="radio" name="pilihan-jawaban" value="1" class="w-4 h-4 text-teal-600 focus:ring-teal-500">
+                    <span class="ml-3 text-sm font-semibold text-slate-700 group-hover:text-teal-900">Hampir Tidak Pernah</span>
+                </label>
+                <label class="flex items-center p-3.5 rounded-2xl border-2 border-slate-100 hover:border-teal-500 hover:bg-teal-50/30 cursor-pointer transition-all group">
+                    <input type="radio" name="pilihan-jawaban" value="2" class="w-4 h-4 text-teal-600 focus:ring-teal-500">
+                    <span class="ml-3 text-sm font-semibold text-slate-700 group-hover:text-teal-900">Kadang-kadang</span>
+                </label>
+                <label class="flex items-center p-3.5 rounded-2xl border-2 border-slate-100 hover:border-teal-500 hover:bg-teal-50/30 cursor-pointer transition-all group">
+                    <input type="radio" name="pilihan-jawaban" value="3" class="w-4 h-4 text-teal-600 focus:ring-teal-500">
+                    <span class="ml-3 text-sm font-semibold text-slate-700 group-hover:text-teal-900">Sering</span>
+                </label>
+                <label class="flex items-center p-3.5 rounded-2xl border-2 border-slate-100 hover:border-teal-500 hover:bg-teal-50/30 cursor-pointer transition-all group">
+                    <input type="radio" name="pilihan-jawaban" value="4" class="w-4 h-4 text-teal-600 focus:ring-teal-500">
+                    <span class="ml-3 text-sm font-semibold text-slate-700 group-hover:text-teal-900">Selalu</span>
+                </label>
+            </div>
+
+            <div class="flex space-x-3">
+                <button type="button" id="btn-sebelumnya" onclick="mundurSoal()" class="hidden w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold py-3.5 px-4 rounded-xl transition-all text-sm">
+                    Kembali
+                </button>
+                <button type="button" id="btn-lanjut" onclick="lanjutSoal()" class="w-full bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-teal-600/25 transition-all text-sm flex items-center justify-center space-x-2">
+                    <span>Lanjut</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- ================= HALAMAN 3: DISCLAIMER & SESI REFLEKSI HATI (JOURNALING) ================= -->
+        <div id="section-refleksi" class="hidden max-w-md w-full bg-white rounded-3xl shadow-xl shadow-slate-200/60 p-8 border border-slate-100 transition-all duration-300">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold mb-4 border border-amber-200/60">
+                💌 Sesi Refleksi Hati & Apresiasi Diri
+            </div>
+
+            <h2 class="text-xl font-extrabold text-slate-900 tracking-tight leading-snug mb-2">
+                Ruang Aman untuk Tubuhmu
+            </h2>
+            
+            <p class="text-slate-600 text-xs leading-relaxed mb-6 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                <b>Disclaimer:</b> Bagian ini adalah ruang privat tanpa penilaian benar atau salah. Luangkan waktu sejenak untuk menuliskan apresiasi jujur dari hatimu untuk diri sendiri.
+            </p>
+
+            <div class="space-y-4 mb-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                        1. Surat Singkat untuk Tubuh Saya 🤍
+                    </label>
+                    <p class="text-[11px] text-slate-400 mb-2">Tuliskan ucapan terima kasih kepada tubuhmu yang sudah berjuang menemanimu.</p>
+                    <textarea id="input-surat" rows="3" placeholder="Cth: Terima kasih kakiku sudah kuat berjalan dan membawaku ke sekolah hari ini..."
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600 transition-all bg-slate-50/50"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                        2. Komitmen Diri Saya ✨
+                    </label>
+                    <p class="text-[11px] text-slate-400 mb-2">Tuliskan 1 hal baik yang akan kamu lakukan untuk merawat kesehatan mental/fisikmu.</p>
+                    <input type="text" id="input-komitmen" placeholder="Cth: Berhenti membandingkan diri di sosmed dan tidur tepat waktu."
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600 transition-all bg-slate-50/50">
+                </div>
+            </div>
+
+            <button type="button" onclick="prosesKeHasil()" 
+                class="w-full bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-teal-600/25 transition-all duration-200 flex items-center justify-center space-x-2">
+                <span>Simpan & Lihat Hasil Analisis</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- ================= HALAMAN 4: HASIL AKHIR & PROFIL KARAKTER ================= -->
+        <div id="section-hasil" class="hidden max-w-md w-full bg-white rounded-3xl shadow-xl shadow-slate-200/60 p-8 border border-slate-100 transition-all duration-300">
+            <div class="text-center mb-6">
+                <span class="inline-block px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold mb-2 border border-teal-200">
+                    🎉 Hasil Asesmen Citra Tubuh
+                </span>
+                <h2 id="hasil-salam" class="text-xl font-extrabold text-slate-900">Halo, Responden!</h2>
+                <p class="text-xs text-slate-500">Berikut adalah analisis profil refleksi fungsi tubuhmu.</p>
+            </div>
+
+            <!-- Kartu Skor & Kategori -->
+            <div class="bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl p-5 text-white mb-6 shadow-lg shadow-teal-500/20">
+                <div class="text-xs font-semibold uppercase tracking-wider text-teal-100 mb-1">Kategori Citra Tubuh</div>
+                <div id="hasil-kategori" class="text-lg font-extrabold mb-3">Citra Tubuh Positif (Sehat)</div>
+                <div class="flex justify-between items-center text-xs border-t border-teal-400/40 pt-3">
+                    <span id="hasil-skor-label">Total Skor Refleksi: 45 / 80</span>
+                    <span id="hasil-tipe-karakter" class="bg-white/20 px-2.5 py-1 rounded-lg font-bold">Body Explorer</span>
+                </div>
+            </div>
+
+            <!-- Analisis & Coping Mandiri -->
+            <div class="space-y-4 mb-6 text-xs text-slate-600 leading-relaxed">
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <span class="font-bold text-slate-900 block mb-1">🔍 Gambaran Kondisimu:</span>
+                    <p id="hasil-deskripsi">Kamu memiliki kesadaran yang baik terhadap fungsi tubuh dan tidak mudah terpengaruh oleh standar tidak realistis di media sosial.</p>
+                </div>
+
+                <div class="bg-teal-50/50 p-4 rounded-2xl border border-teal-100">
+                    <span class="font-bold text-teal-900 block mb-1">💡 Saran Self-Coping Mandiri:</span>
+                    <ul id="hasil-saran" class="list-disc pl-4 space-y-1">
+                        <li>Terus pertahankan kebiasaan bersyukur atas apa yang bisa dilakukan oleh tubuhmu setiap hari.</li>
+                        <li>Batasi waktu penggunaan media sosial jika mulai merasa cemas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tombol Kirim ke WhatsApp Peneliti & Ulangi -->
+            <div class="space-y-3">
+                <button type="button" onclick="kirimKeWhatsApp()" 
+                    class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all text-xs flex items-center justify-center space-x-2 shadow-md shadow-emerald-600/20">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Kirim Laporan ke WhatsApp Peneliti</span>
+                </button>
+
+                <button type="button" onclick="resetTotal()" 
+                    class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3.5 px-6 rounded-xl transition-all text-xs flex items-center justify-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    <span>Ulangi Sesi Refleksi</span>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full text-center py-6 text-slate-400 text-xs border-t border-slate-100 bg-white">
+        <p>&copy; 2026 HealthyMental Check.id &bull; Intervensi Skripsi Keperawatan</p>
+    </footer>
+
+    <!-- LOGIKA JAVASCRIPT & INTEGRASI GOOGLE SHEETS -->
+    <script>
+        // URL Google Apps Script yang sudah diberikan
+        const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz5Qau3yJLgpLNcImb6sY7pqAiJa-Vk9Cp3uSNvBTT7a3mwnzaXIq4-QJtxlCSFPb9F/exec";
+
+        const daftarPertanyaan = [
+            { kategori: "Refleksi Media Sosial", pertanyaan: "Saya merasa perlu membandingkan penampilan fisik saya dengan orang lain yang ada di media sosial." },
+            { kategori: "Refleksi Media Sosial", pertanyaan: "Saya merasa kurang menarik atau minder setelah melihat postingan foto/video di media sosial." },
+            { kategori: "Refleksi Media Sosial", pertanyaan: "Saya merasa tidak puas dengan bentuk tubuh saya sendiri setelah terpapar standar kecantikan di internet." },
+            { kategori: "Refleksi Media Sosial", pertanyaan: "Saya sering berharap memiliki bentuk tubuh atau wajah yang persis seperti yang saya lihat di media sosial." },
+            { kategori: "Refleksi Media Sosial", pertanyaan: "Saya merasa cemas apabila foto atau penampilan saya dikomentari oleh orang lain secara online." },
+            
+            { kategori: "Apresiasi Tubuh", pertanyaan: "Saya merasa sulit menghargai apa yang sudah dilakukan oleh tubuh saya setiap harinya." },
+            { kategori: "Apresiasi Tubuh", pertanyaan: "Saya sering mengkritik bagian tubuh tertentu (seperti berat badan, bentuk wajah, atau tinggi badan) secara berlebihan." },
+            { kategori: "Apresiasi Tubuh", pertanyaan: "Saya mengabaikan rasa lelah tubuh saya demi memaksakan standar penampilan yang sempurna di depan orang lain." },
+            { kategori: "Apresiasi Tubuh", pertanyaan: "Saya merasa malu ketika harus tampil apa adanya di hadapan teman-teman atau lingkungan sosial." },
+            { kategori: "Apresiasi Tubuh", pertanyaan: "Saya jarang mensyukuri fungsi luar biasa yang diberikan tubuh saya (seperti bisa berjalan, bernapas, dan belajar)." },
+            
+            { kategori: "Kepercayaan Diri", pertanyaan: "Saya merasa cemas bahwa orang lain menilai diri saya dari fisik semata, bukan dari kemampuan atau kepribadian." },
+            { kategori: "Kepercayaan Diri", pertanyaan: "Saya menarik diri dari pergaulan atau kegiatan kelompok karena merasa tidak cukup percaya diri dengan penampilan saya." },
+            { kategori: "Kepercayaan Diri", pertanyaan: "Saya merasa tertekan apabila ada orang lain yang membicarakan atau mengomentari fisik saya." },
+            { kategori: "Kepercayaan Diri", pertanyaan: "Saya sering merasa ragu pada kemampuan diri sendiri saat harus berbicara atau tampil di depan umum." },
+            { kategori: "Kepercayaan Diri", pertanyaan: "Saya merasa pendapat atau ide saya kurang dihargai oleh orang lain karena penampilan saya." },
+            
+            { kategori: "Penerimaan Diri", pertanyaan: "Saya merasa kesulitan untuk menuliskan kata-kata terima kasih atau apresiasi yang tulus untuk tubuh saya sendiri." },
+            { kategori: "Penerimaan Diri", pertanyaan: "Saya merasa lelah berusaha memenuhi standar kesempurnaan yang dibuat oleh orang lain." },
+            { kategori: "Penerimaan Diri", pertanyaan: "Saya merasa sulit untuk memaafkan kekurangan fisik atau kesalahan yang pernah saya lakukan pada diri sendiri." },
+            { kategori: "Penerimaan Diri", pertanyaan: "Saya mengabaikan pentingnya membuat komitmen harian untuk merawat kesehatan mental dan fisik diri sendiri." },
+            { kategori: "Penerimaan Diri", pertanyaan: "Saya merasa pesimis bahwa rasa minder atau insecure ini bisa dihilangkan dari dalam diri saya." }
+        ];
+
+        let indexSoalAktif = 0;
+        let jawabanSimpan = {};
+        let userData = {};
+        let skorAkhirGlobal = 0;
+        let kategoriGlobal = "";
+
+        // 1. Submit Landing Page -> Masuk Halaman Kuesioner
+        document.getElementById('form-identitas').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            userData.nama = document.getElementById('nama-user').value;
+            userData.usia = document.getElementById('usia-user').value;
+            userData.kelas = document.getElementById('kelas-user').value;
+
+            document.getElementById('section-landing').classList.add('hidden');
+            document.getElementById('section-kuesioner').classList.remove('hidden');
+            document.getElementById('badge-header').innerText = `Halo, ${userData.nama}!`;
+
+            muatSoal();
+        });
+
+        function muatSoal() {
+            const current = daftarPertanyaan[indexSoalAktif];
+            document.getElementById('kategori-badge').innerText = current.kategori;
+            document.getElementById('teks-pertanyaan').innerText = current.pertanyaan;
+
+            const nomor = indexSoalAktif + 1;
+            const total = daftarPertanyaan.length;
+            const persen = Math.round((nomor / total) * 100);
+
+            document.getElementById('label-progres').innerText = `PERTANYAAN ${nomor} DARI ${total}`;
+            document.getElementById('persen-progres').innerText = `${persen}%`;
+            document.getElementById('bar-progres').style.width = `${persen}%`;
+
+            document.querySelectorAll('input[name="pilihan-jawaban"]').forEach(el => {
+                el.checked = (jawabanSimpan[indexSoalAktif] == el.value);
+            });
+
+            const btnSebelumnya = document.getElementById('btn-sebelumnya');
+            const btnLanjut = document.getElementById('btn-lanjut');
+
+            if (indexSoalAktif > 0) {
+                btnSebelumnya.classList.remove('hidden');
+                btnLanjut.classList.remove('w-full');
+                btnLanjut.classList.add('w-2/3');
+            } else {
+                btnSebelumnya.classList.add('hidden');
+                btnLanjut.classList.remove('w-2/3');
+                btnLanjut.classList.add('w-full');
+            }
+
+            if (nomor === total) {
+                btnLanjut.innerHTML = `<span>Lanjut ke Sesi Refleksi Hati</span>`;
+            } else {
+                btnLanjut.innerHTML = `<span>Lanjut</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>`;
+            }
+        }
+
+        function lanjutSoal() {
+            const pilihanDipilih = document.querySelector('input[name="pilihan-jawaban"]:checked');
+            if (!pilihanDipilih) {
+                alert('Pilih salah satu jawaban dulu ya, bro/sist!');
+                return;
+            }
+
+            jawabanSimpan[indexSoalAktif] = parseInt(pilihanDipilih.value);
+
+            if (indexSoalAktif < daftarPertanyaan.length - 1) {
+                indexSoalAktif++;
+                muatSoal();
+            } else {
+                document.getElementById('section-kuesioner').classList.add('hidden');
+                document.getElementById('section-refleksi').classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function mundurSoal() {
+            if (indexSoalAktif > 0) {
+                indexSoalAktif--;
+                muatSoal();
+            }
+        }
+
+        function kembaliKeLanding() {
+            if (confirm("Mau kembali ke halaman awal? Jawaban yang sudah diisi akan direset.")) {
+                indexSoalAktif = 0;
+                jawabanSimpan = {};
+                document.getElementById('form-identitas').reset();
+
+                document.getElementById('section-kuesioner').classList.add('hidden');
+                document.getElementById('section-landing').classList.add('hidden');
+                document.getElementById('section-landing').classList.remove('hidden');
+                document.getElementById('badge-header').innerText = 'Digital Nursing Intervention';
+            }
+        }
+
+        // 3. Simpan Refleksi Teks -> Hitung Skor, Kirim ke Google Sheets, & Masuk Halaman 4
+        function prosesKeHasil() {
+            userData.surat = document.getElementById('input-surat').value || "-";
+            userData.komitmen = document.getElementById('input-komitmen').value || "-";
+
+            // Hitung total skor (rentang 20 - 80)
+            let totalSkor = 0;
+            for (let i = 0; i < daftarPertanyaan.length; i++) {
+                totalSkor += (jawabanSimpan[i] || 1);
+            }
+            skorAkhirGlobal = totalSkor;
+
+            let tipeKarakter = "";
+            let deskripsi = "";
+            let saranHtml = "";
+
+            if (totalSkor <= 35) {
+                kategoriGlobal = "Citra Tubuh Sangat Positif";
+                tipeKarakter = "Body Explorer 🌟";
+                deskripsi = "Luar biasa! Kamu memiliki apresiasi yang sangat tinggi terhadap fungsi tubuh dan tidak mudah terpengaruh oleh standar tidak realistis di media sosial.";
+                saranHtml = `<li>Pertahankan pola pikir positif dan terus syukuri apa yang bisa dilakukan oleh tubuhmu.</li><li>Jadilah inspirasi bagi teman-teman sekitar agar lebih percaya diri.</li>`;
+            } else if (totalSkor <= 55) {
+                kategoriGlobal = "Citra Tubuh Cukup Seimbang";
+                tipeKarakter = "Balanced Seeker ⚖️";
+                deskripsi = "Kamu kadang-kadang masih merasa terpengaruh oleh media sosial, namun secara umum sudah mulai memahami pentingnya menghargai fungsi tubuh sendiri.";
+                saranHtml = `<li>Kurangi waktu membandingkan diri dengan orang lain di feed media sosial.</li><li>Perbanyak membaca afirmasi positif dan lakukan teknik relaksasi pernapasan saat merasa cemas.</li>`;
+            } else {
+                kategoriGlobal = "Perlu Perhatian (Rentan Insecure)";
+                tipeKarakter = "Social Media Overthinker ⚠️";
+                deskripsi = "Skor menunjukkan kamu cukup sering merasa tertekan oleh standar penampilan online. Mari fokus kembali pada fungsi luar biasa tubuhmu, bukan sekadar penampilan visual.";
+                saranHtml = `<li>Lakukan journaling harian seperti 'Surat untuk Tubuh' secara rutin untuk membangun welas asih.</li><li>Jangan ragu untuk berbicara dengan guru BK atau tenaga kesehatan jiwa sekolah apabila beban pikiran terasa berat.</li>`;
+            }
+
+            // KIRIM OTOMATIS KE GOOGLE SHEETS (BACKGROUND)
+            const dataKirim = {
+                nama: userData.nama,
+                usia: userData.usia,
+                kelas: userData.kelas,
+                skor: skorAkhirGlobal,
+                kategori: kategoriGlobal,
+                surat: userData.surat,
+                komitmen: userData.komitmen,
+                tanggal: new Date().toLocaleString()
+            };
+
+            fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dataKirim)
+            }).catch(err => console.log("Gagal kirim ke sheets:", err));
+
+            // Tampilkan ke Halaman 4
+            document.getElementById('hasil-salam').innerText = `Halo, ${userData.nama}!`;
+            document.getElementById('hasil-kategori').innerText = kategoriGlobal;
+            document.getElementById('hasil-skor-label').innerText = `Total Skor Refleksi: ${skorAkhirGlobal} / 80`;
+            document.getElementById('hasil-tipe-karakter').innerText = tipeKarakter;
+            document.getElementById('hasil-deskripsi').innerText = deskripsi;
+            document.getElementById('hasil-saran').innerHTML = saranHtml;
+
+            document.getElementById('section-refleksi').classList.add('hidden');
+            document.getElementById('section-hasil').classList.remove('hidden');
+            document.getElementById('badge-header').innerText = `Selesai - Sesi ${userData.nama}`;
+            window.scrollTo(0, 0);
+        }
+
+        // Tombol Kirim Manual ke WhatsApp Peneliti
+        function kirimKeWhatsApp() {
+            const nomorWaPeneliti = "62881012585311"; // Ganti dengan nomor WhatsApp asli teman lu
+
+            const pesan = `Halo Peneliti, saya sudah menyelesaikan sesi intervensi HealthyMental Check.id:%0A%0A` +
+                          `* Nama: ${userData.nama}%0A` +
+                          `* Usia: ${userData.usia} Tahun%0A` +
+                          `* Kelas: ${userData.kelas}%0A` +
+                          `* Total Skor: ${skorAkhirGlobal} / 80%0A` +
+                          `* Kategori: ${kategoriGlobal}%0A%0A` +
+                          `* Surat untuk Tubuh:* "${userData.surat}"%0A` +
+                          `* Komitmen Diri:* "${userData.komitmen}"`;
+
+            window.open(`https://api.whatsapp.com/send?phone=${nomorWaPeneliti}&text=${pesan}`, '_blank');
+        }
+
+        function resetTotal() {
+            indexSoalAktif = 0;
+            jawabanSimpan = {};
+            userData = {};
+            document.getElementById('form-identitas').reset();
+            document.getElementById('input-surat').value = '';
+            document.getElementById('input-komitmen').value = '';
+
+            document.getElementById('section-hasil').classList.add('hidden');
+            document.getElementById('section-landing').classList.remove('hidden');
+            document.getElementById('badge-header').innerText = 'Digital Nursing Intervention';
+        }
+    </script>
+</body>
+</html>
